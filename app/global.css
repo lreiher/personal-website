@@ -148,10 +148,3 @@ table {
 .title {
   text-wrap: balance;
 }
-
-@font-face {
-  font-family: "MonaspaceArgon";
-  src: url("/fonts/MonaspaceArgonVarVF[wght,wdth,slnt].ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}

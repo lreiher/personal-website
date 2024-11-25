@@ -20,7 +20,7 @@ export default function Typewriter({ text }: { text: string }) {
   return (
     <h1
       className="mb-8 text-4xl font-semibold tracking-tighter"
-      style={{ fontFamily: "MonaspaceArgon, Courier New, monospace" }}
+      style={{ fontFamily: "GeistMono, monospace" }}
     >
       {typedText}
     </h1>
