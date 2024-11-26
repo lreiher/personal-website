@@ -10,17 +10,21 @@ export default function TriangularMesh() {
 
         const canvas = canvasRef.current;
         const ctx = canvas.getContext("2d")!;
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        let width = window.innerWidth;
+        let height = window.innerHeight;
         canvas.width = width;
         canvas.height = height;
 
-        const nodes = Array.from({ length: 100 }, () => ({
-            x: Math.random() * width,
-            y: Math.random() * height,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5,
-        }));
+        // Generate nodes
+        const generateNodes = () =>
+            Array.from({ length: 100 }, () => ({
+                x: Math.random() * width,
+                y: Math.random() * height,
+                vx: (Math.random() - 0.5) * 0.5,
+                vy: (Math.random() - 0.5) * 0.5,
+            }));
+
+        let nodes = generateNodes();
 
         const draw = () => {
             ctx.clearRect(0, 0, width, height);
@@ -68,8 +72,11 @@ export default function TriangularMesh() {
 
         // Handle window resize
         const handleResize = () => {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            nodes = generateNodes(); // Regenerate nodes to fit the new dimensions
         };
         window.addEventListener("resize", handleResize);
 
@@ -82,7 +89,7 @@ export default function TriangularMesh() {
         <canvas
             ref={canvasRef}
             style={{
-                position: "absolute",
+                position: "fixed",
                 top: 0,
                 left: 0,
                 width: "100%",
