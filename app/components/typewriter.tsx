@@ -20,9 +20,9 @@ export default function Typewriter({ text }: { text: string }) {
   return (
     <h1
       className="mb-8 text-4xl font-semibold tracking-tighter"
-      style={{ fontFamily: "GeistMono, monospace" }}
+      style={{ fontFamily: "GeistMono, monospace", minHeight: "1em" }}
     >
-      {typedText}
+      {typedText || "\u00A0"}
     </h1>
   );
 }
