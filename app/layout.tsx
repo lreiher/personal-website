@@ -12,15 +12,15 @@ import TriangularMesh from './components/triangular-mesh';
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
-    default: 'Next.js Portfolio Starter',
-    template: '%s | Next.js Portfolio Starter',
+    default: 'Lennart Reiher',
+    template: '%s | Lennart Reiher',
   },
-  description: 'This is my portfolio.',
+  description: "Lennart Reiher's personal website",
   openGraph: {
-    title: 'My Portfolio',
-    description: 'This is my portfolio.',
+    title: 'Lennart Reiher',
+    description: "Lennart Reiher's personal website",
     url: baseUrl,
-    siteName: 'My Portfolio',
+    siteName: 'Lennart Reiher',
     locale: 'en_US',
     type: 'website',
   },
