@@ -1,6 +1,7 @@
 'use client'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const navItems = {
   '/': {
@@ -22,7 +23,6 @@ const navItems = {
 
 export function Navbar() {
   const currentPath = usePathname()
-  console.log('Current path:', currentPath)
   return (
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
@@ -31,6 +31,10 @@ export function Navbar() {
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
+            <Link href="/">
+              <Image src="/logo.png" alt="Logo" width={20} height={20} className="m-1" />
+            </Link>
+            <div className="pr-2"></div>
             {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = currentPath === path
               return (
