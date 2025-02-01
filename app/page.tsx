@@ -13,6 +13,14 @@ export default function Page() {
         }}
       >
         <img
+          src="/logo.png"
+          alt="Logo"
+          style={{
+            height: "180px",
+            backgroundColor: "white",
+          }}
+        />
+        <img
           src="/profile.jpg"
           alt="Profile picture"
           style={{
