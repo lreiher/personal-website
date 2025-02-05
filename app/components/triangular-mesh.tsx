@@ -50,7 +50,8 @@ export default function TriangularMesh() {
                     }
                 }
             }
-            ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+            const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            ctx.strokeStyle = isDarkMode ? "rgba(255, 255, 255, 0.5)" : "rgba(0, 0, 0, 0.5)";
             ctx.lineWidth = 0.5;
             ctx.stroke();
 
@@ -58,7 +59,7 @@ export default function TriangularMesh() {
             nodes.forEach((node) => {
                 ctx.beginPath();
                 ctx.arc(node.x, node.y, 1, 0, Math.PI * 2);
-                ctx.fillStyle = "rgba(255, 255, 255, 0.8)";
+                ctx.fillStyle = isDarkMode ? "rgba(255, 255, 255, 0.8)" : "rgba(0, 0, 0, 0.8)";
                 ctx.fill();
             });
         };
