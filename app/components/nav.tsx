@@ -32,7 +32,20 @@ export function Navbar() {
         >
           <div className="flex flex-row space-x-0 pr-10">
             <Link href="/">
-              <Image src="/logo.png" alt="Logo" width={20} height={20} className="m-1" />
+              <Image
+              src="/logo/logo-light.svg"
+              alt="Logo"
+              width={20}
+              height={20}
+              className="m-1 dark:hidden"
+              />
+              <Image
+              src="/logo/logo-dark.svg"
+              alt="Logo"
+              width={20}
+              height={20}
+              className="m-1 hidden dark:block"
+              />
             </Link>
             <div className="pr-2"></div>
             {Object.entries(navItems).map(([path, { name }]) => {
