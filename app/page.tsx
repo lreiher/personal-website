@@ -27,15 +27,11 @@ export default function Page() {
       </div>
       <Typewriter text="Hi, I'm Lennart!" />
       <p className="mb-2">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        I'm a researcher at the <a href="https://www.ika.rwth-aachen.de/en">Institute for Automotive Engineering (ika) at RWTH Aachen University</a> — next goal: <i>Dr.-Ing.</i> on connected automated driving.
       </p>
-      {/* <div className="my-8">
-        <BlogPosts />
-      </div> */}
+      <p className="mb-2">
+        <b>I like all things tech.</b>
+      </p>
     </section>
   );
 }
