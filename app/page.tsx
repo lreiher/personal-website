@@ -9,7 +9,7 @@ export default function Page() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          marginBottom: "3rem",
+          marginBottom: "2rem",
         }}
       >
         <img
@@ -26,7 +26,7 @@ export default function Page() {
         />
       </div>
       <Typewriter text="Hi, I'm Lennart!" />
-      <p className="mb-4">
+      <p className="mb-2">
         {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
         Vim's keystroke commands and tabs' flexibility for personal viewing
         preferences. This extends to my support for static typing, where its
