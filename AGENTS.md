@@ -3,15 +3,13 @@
 ## Project Structure & Module Organization
 - `app/` hosts the Next.js App Router routes and UI. Each route uses `page.tsx` and optional `layout.tsx`.
 - `app/components/` contains shared React components.
-- `app/blog/posts/`, `app/projects/`, `app/publications/`, and `app/cv/` hold MDX content (kebab-case filenames).
-- `app/rss/`, `app/og/`, `app/robots.ts`, and `app/sitemap.ts` define SEO, RSS, and OG image routes.
-- `public/` stores static assets (e.g., `public/profile.jpg`).
-- Root configs include `tsconfig.json`, `postcss.config.js`, and `next-env.d.ts`.
+- `app/blog/posts/` holds MDX content (kebab-case filenames).
+- `public/` stores static assets and static SEO files (e.g., `public/profile.jpg`, `public/robots.txt`, `public/sitemap.xml`).
+- Root configs include `next.config.js`, `tsconfig.json`, `postcss.config.js`, and `next-env.d.ts`.
 
 ## Build, Test, and Development Commands
 - `pnpm dev`: start the local Next.js dev server.
-- `pnpm build`: create a production build.
-- `pnpm start`: run the production server after `pnpm build`.
+- `pnpm build`: create a static export in `out/`.
 
 ## Coding Style & Naming Conventions
 - TypeScript + React with the Next.js App Router.
@@ -29,4 +27,4 @@
 
 ## Configuration Tips
 - Content updates typically happen in the MDX files under `app/`.
-- For SEO changes, update `app/robots.ts`, `app/sitemap.ts`, and `app/rss/` as needed.
+- For SEO changes, update `public/robots.txt` and `public/sitemap.xml` as needed.

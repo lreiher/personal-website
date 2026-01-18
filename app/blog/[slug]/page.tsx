@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
-import { baseUrl } from 'app/sitemap'
+
+const baseUrl = 'https://lennartreiher.de'
 
 export async function generateStaticParams() {
   let posts = getBlogPosts()
@@ -23,9 +24,7 @@ export function generateMetadata({ params }) {
     summary: description,
     image,
   } = post.metadata
-  let ogImage = image
-    ? image
-    : `${baseUrl}/og?title=${encodeURIComponent(title)}`
+  let ogImage = image ? `${baseUrl}${image}` : `${baseUrl}/profile.jpg`
 
   return {
     title,
@@ -36,11 +35,11 @@ export function generateMetadata({ params }) {
       type: 'article',
       publishedTime,
       url: `${baseUrl}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+          images: [
+            {
+              url: ogImage,
+            },
+          ],
     },
     twitter: {
       card: 'summary_large_image',
@@ -73,7 +72,7 @@ export default function Blog({ params }) {
             description: post.metadata.summary,
             image: post.metadata.image
               ? `${baseUrl}${post.metadata.image}`
-              : `/og?title=${encodeURIComponent(post.metadata.title)}`,
+              : `${baseUrl}/profile.jpg`,
             url: `${baseUrl}/blog/${post.slug}`,
             author: {
               '@type': 'Person',

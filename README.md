@@ -12,5 +12,10 @@ pnpm dev
 
 ```bash
 pnpm build
-pnpm start
+```
+
+The static site is generated in `out/`. Serve it with any static file server, for example:
+
+```bash
+python3 -m http.server --directory out 8080
 ```
