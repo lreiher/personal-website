@@ -16,9 +16,6 @@ const navItems = {
   "/publications": {
     name: "publications",
   },
-  // "/blog": {
-  //   name: "blog",
-  // },
 }
 
 // Temporary: hide these tabs without removing routes/content.

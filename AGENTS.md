@@ -3,7 +3,6 @@
 ## Project Structure & Module Organization
 - `app/` hosts the Next.js App Router routes and UI. Each route uses `page.tsx` and optional `layout.tsx`.
 - `app/components/` contains shared React components.
-- `app/blog/posts/` holds MDX content (kebab-case filenames).
 - `public/` stores static assets and static SEO files (e.g., `public/profile.jpg`, `public/robots.txt`, `public/sitemap.xml`).
 - Root configs include `next.config.js`, `tsconfig.json`, `postcss.config.js`, and `next-env.d.ts`.
 
@@ -14,7 +13,7 @@
 ## Coding Style & Naming Conventions
 - TypeScript + React with the Next.js App Router.
 - Use 2-space indentation and double quotes to match existing `.tsx` style.
-- Route files use `page.tsx` and `layout.tsx`; MDX content uses kebab-case (e.g., `app/blog/posts/spaces-vs-tabs.mdx`).
+- Route files use `page.tsx` and `layout.tsx`; MDX content uses kebab-case when present.
 - Styling is Tailwind v4 with global rules in `app/global.css`.
 
 ## Testing Guidelines
