@@ -15,9 +15,15 @@ export default function TriangularMesh() {
         canvas.width = width;
         canvas.height = height;
 
+        const getNodeCount = () => {
+            if (width < 640) return 40;
+            if (width < 1024) return 60;
+            return 100;
+        };
+
         // Generate nodes
         const generateNodes = () =>
-            Array.from({ length: 100 }, () => ({
+            Array.from({ length: getNodeCount() }, () => ({
                 x: Math.random() * width,
                 y: Math.random() * height,
                 vx: (Math.random() - 0.5) * 0.5,
@@ -41,10 +47,11 @@ export default function TriangularMesh() {
 
             // Draw triangles
             ctx.beginPath();
+            const connectionDistance = width < 640 ? 90 : 150;
             for (let i = 0; i < nodes.length; i++) {
                 for (let j = i + 1; j < nodes.length; j++) {
                     const dist = Math.hypot(nodes[i].x - nodes[j].x, nodes[i].y - nodes[j].y);
-                    if (dist < 150) {
+                    if (dist < connectionDistance) {
                         ctx.moveTo(nodes[i].x, nodes[i].y);
                         ctx.lineTo(nodes[j].x, nodes[j].y);
                     }
