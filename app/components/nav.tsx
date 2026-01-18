@@ -4,22 +4,25 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const navItems = {
-  '/': {
-    name: 'home',
+  "/": {
+    name: "home",
   },
-  '/cv': {
-    name: 'cv',
+  "/cv": {
+    name: "cv",
   },
-  '/projects': {
-    name: 'projects',
+  "/projects": {
+    name: "projects",
   },
-  '/publications': {
-    name: 'publications',
+  "/publications": {
+    name: "publications",
   },
-  // '/blog': {
-  //   name: 'blog',
+  // "/blog": {
+  //   name: "blog",
   // },
 }
+
+// Temporary: hide these tabs without removing routes/content.
+const hiddenNavRoutes = new Set(["/cv", "/projects", "/publications"])
 
 export function Navbar() {
   const currentPath = usePathname()
@@ -48,7 +51,9 @@ export function Navbar() {
               />
             </Link>
             <div className="pr-2"></div>
-            {Object.entries(navItems).map(([path, { name }]) => {
+            {Object.entries(navItems)
+              .filter(([path]) => !hiddenNavRoutes.has(path))
+              .map(([path, { name }]) => {
               const isActive = currentPath === path
               return (
                 <Link
