@@ -1,21 +1,18 @@
-# [lennartreiher.de](https://lennartreiher.de)
+# [lennartreiher.de](https://lennartreiher.de) – Lennart Reiher's Personal Website
 
-My personal website built with Next.js, Tailwind, and MDX.
-
-## Development
+### Development
 
 ```bash
 pnpm dev
 ```
 
-## Production build
+### Static Production Build
 
 ```bash
-pnpm build
+pnpm build # generates static site in out/
+python3 -m http.server --directory out 8080 # serve with any static file server
 ```
 
-The static site is generated in `out/`. Serve it with any static file server, for example:
+### Deployment
 
-```bash
-python3 -m http.server --directory out 8080
-```
+Main branch is automatically deployed to [lennartreiher.de](https://lennartreiher.de) via [GitHub Workflow](.github/workflows/deploy.yml).
