@@ -7,19 +7,10 @@ const navItems = {
   "/": {
     name: "home",
   },
-  "/cv": {
-    name: "cv",
-  },
-  "/projects": {
-    name: "projects",
-  },
-  "/publications": {
+  "/publications/": {
     name: "publications",
   },
 }
-
-// Temporary: hide these tabs without removing routes/content.
-const hiddenNavRoutes = new Set(["/cv", "/projects", "/publications"])
 
 export function Navbar() {
   const currentPath = usePathname()
@@ -48,9 +39,7 @@ export function Navbar() {
               />
             </Link>
             <div className="pr-2"></div>
-            {Object.entries(navItems)
-              .filter(([path]) => !hiddenNavRoutes.has(path))
-              .map(([path, { name }]) => {
+            {Object.entries(navItems).map(([path, { name }]) => {
               const isActive = currentPath === path
               return (
                 <Link
