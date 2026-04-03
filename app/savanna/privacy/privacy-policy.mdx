@@ -4,15 +4,15 @@ publishedAt: "2026-02"
 summary: "Privacy policy for Savanna: Safari Wildlife Tracker."
 ---
 
-# Privacy Policy - Savanna: Safari Wildlife Tracker
+# Privacy Policy — Savanna: Safari Wildlife Tracker
 
-**Last updated: February 2026**
+**Last updated: April 2026**
 
 ## Overview
 
 Savanna is a wildlife sighting tracker for safari travellers. This policy explains what data the app collects, how it is used, and your rights as a user.
 
-**Summary: All your data stays on your device. Nothing is sent to our servers. No account is required.**
+**Summary: Your sightings, notes, and photos stay on your device. No account is required. Some optional app features connect to Apple and Wikimedia services.**
 
 ---
 
@@ -29,11 +29,11 @@ When you log a sighting, the app stores the following **exclusively on your devi
 | Sighting notes and timestamps | Your personal safari log |
 | Species selections and counts | Your sighting records |
 
-This data is stored in the app's private storage using Apple's standard iOS data storage (AsyncStorage). It is never transmitted to any external server.
+This data is stored locally on your device using the app's on-device storage. We do not upload your sighting records, notes, or photos to our own servers.
 
 ### Data We Do NOT Collect
 
-- We do not collect your name, email address, or any account credentials
+- We do not require an account or profile
 - We do not use analytics or crash-reporting services
 - We do not track usage behaviour
 - We do not share any data with third parties for advertising
@@ -45,13 +45,16 @@ This data is stored in the app's private storage using Apple's standard iOS data
 Savanna uses a small number of Apple and third-party services to provide its features:
 
 ### Apple StoreKit (In-App Purchases)
-If you purchase the Full Version, the transaction is handled entirely by Apple. We do not receive or store your payment details. Apple's privacy policy applies: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/).
+If you purchase the Full Version, the transaction is handled entirely by Apple through StoreKit. We do not receive or store your payment card details. Apple's privacy policy applies: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/).
 
 ### Wikipedia API
-The Species Detail screen optionally fetches article summaries from the Wikipedia API (en.wikipedia.org). This is a read-only request that includes the species name as a query parameter. No personal data is transmitted. Wikipedia's privacy policy applies: [wikimedia.org/wiki/Privacy_policy](https://foundation.wikimedia.org/wiki/Privacy_policy).
+The catalogue and species detail screens can optionally fetch Wikipedia summaries, thumbnails, and article pages based on species names and the current app language. These requests are sent directly from your device to Wikimedia/Wikipedia services and may include standard network metadata such as your IP address. We do not intentionally include your sighting notes, photos, or stored sighting history in these requests. Wikimedia's privacy policy applies: [wikimedia.org/wiki/Privacy_policy](https://foundation.wikimedia.org/wiki/Privacy_policy).
 
 ### Apple Maps
-The Map screen uses Apple Maps to display your sighting locations. Apple Maps may receive tile requests to render the map. No sighting data or personal information is sent to Apple as part of this. Apple's privacy policy applies: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/).
+The Map screen uses Apple Maps to render maps and can display your current device location inside the app. Apple may receive the network requests needed to load map tiles and related map functionality. We do not intentionally upload your sighting notes or photos to Apple through this feature. Apple's privacy policy applies: [apple.com/legal/privacy](https://www.apple.com/legal/privacy/).
+
+### Contacting Support
+If you choose the in-app "Contact Developer" option, Savanna prepares an email draft in your mail app with optional diagnostic details such as app version, device model, operating system version, locale, time zone, and Full Version status. This information is only sent if you decide to send the email.
 
 ---
 
@@ -63,9 +66,9 @@ The app requests the following iOS permissions:
 |-----------|----------------|
 | Camera | To take photos of wildlife sightings |
 | Photo Library | To attach existing photos to sightings |
-| Location (While Using) | To tag GPS coordinates on your sightings |
+| Location (While Using) | To prefill and attach GPS coordinates to your sightings |
 
-Permissions are requested only when you actively use the relevant feature. You can revoke them at any time in iOS Settings.
+Camera and Photo Library permissions are requested when you choose to add a photo. Location permission is requested when you open the Add Sighting screen so the app can prefill coordinates. You can revoke permissions at any time in iOS Settings.
 
 ---
 
@@ -97,8 +100,8 @@ If we make material changes to this policy, the updated version will be publishe
 
 If you have questions about this privacy policy, please contact:
 
-**Lennart Reiher**  
-Email: [info@lennartreiher.de](mailto:info@lennartreiher.de)
+**Lennart Reiher**
+Email: info@lennartreiher.de
 
 ---
 
