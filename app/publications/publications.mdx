@@ -1,5 +1,7 @@
 **2026**
+- [Cloud-Native Operation of Roadside Infrastructure Enabling Demand-Driven Collective Perception via V2X](#cloud-native-operation-of-roadside-infrastructure-enabling-demand-driven-collective-perception-via-v2x)
 - [karl. – A Research Vehicle for Automated and Connected Driving](#karl--a-research-vehicle-for-automated-and-connected-driving)
+- [Robust Fusion of Object-Level V2X for Learned 3D Object Detection](#robust-fusion-of-object-level-v2x-for-learned-3d-object-detection)
 
 **2025**
 - [Application Management in C-ITS: Orchestrating Demand-Driven Deployments and Reconfigurations](#application-management-in-c-its-orchestrating-demand-driven-deployments-and-reconfigurations)
@@ -26,6 +28,26 @@
 <br></br>
 ___
 
+## Cloud-Native Operation of Roadside Infrastructure Enabling Demand-Driven Collective Perception via V2X
+
+**Lukas Zanger, Fabian Thomsen, Guido Linden, Jean-Pierre Busch, Lennart Reiher, Lutz Eckstein**
+
+*IEEE International Conference on Intelligent Transportation Systems (ITSC)*  
+*September 2026, Naples, Italy*
+
+*Preprint: coming soon*
+
+<details>
+<summary><i>Abstract</i></summary>
+
+> <sup>Intelligent roadside infrastructure is a key enabler for cooperative intelligent transport systems (C-ITS), supporting vehicles equipped with automated driving systems (ADS), e.g., through enhanced environment perception. With a growing number and an expanding functional scope of roadside units, scalable and efficient operation becomes a challenge. This paper presents a cloud-native architecture for the operation of distributed roadside infrastructure based on a Kubernetes cluster spanning roadside units and a cloud server. Building on this architecture, a demand-driven orchestration approach is implemented to dynamically deploy resource-intensive services only when required. As a representative use case, a V2X-based collective perception application is deployed on-demand when a connected vehicle is nearby. The approach is validated in a real-world experiment in our test field in Aachen, demonstrating that the collective perception application starts in time for the vehicle to benefit from it. Without any demand, the application remains inactive, reducing energy consumption, channel congestion, and hardware wear. Beyond the primary evaluation, V2X recordings from the test field are analyzed to estimate the energy-saving potential of demand-driven operation. In summary, the results demonstrate the practical feasibility of cloud-native, demand-driven operation of roadside infrastructure and indicate its potential to improve scalability and (energy) efficiency in future C-ITS deployments.</sup>
+
+</details>
+
+![Paper Thumbnail](/publications/cloud-native-rita.png)
+
+___
+
 ## karl. – A Research Vehicle for Automated and Connected Driving
 
 **Jean-Pierre Busch, Lukas Ostendorf, Guido Linden, Lennart Reiher, Till Beemelmanns, Bastian Lampe, Timo Woopen, Lutz Eckstein**
@@ -43,6 +65,26 @@ ___
 </details>
 
 [![Paper Thumbnail](/publications/karl.png)](https://www.arxiv.org/abs/2602.08842)
+
+___
+
+## Robust Fusion of Object-Level V2X for Learned 3D Object Detection
+
+**Lukas Ostendorf, Lennart Reiher, Onn Haran, Lutz Eckstein**
+
+*IEEE Vehicular Technology Conference (VTC) Spring*  
+*June 2026, Nice, France*
+
+*[Preprint: 10.48550/arXiv.2605.00595](https://arxiv.org/abs/2605.00595)*
+
+<details>
+<summary><i>Abstract</i></summary>
+
+> <sup>Perception for automated driving is largely based on onboard environmental sensors, such as cameras and radar, which are cost-effective but limited by line-of-sight and field-of-view constraints. These inherent limitations may cause onboard perception to fail under occlusions or poor visibility conditions. In parallel, cooperative awareness via vehicle-to-everything (V2X) communication is becoming increasingly available, enabling vehicles and infrastructure to share their own state as object-level information that complements onboard perception. In this work, we study how such V2X information can be integrated into 3D object detection and how robust the resulting system is to realistic V2X imperfections. Using the nuScenes dataset, we emulate object-level cooperative awareness messages from ground truth, injecting controlled noise and object dropout to mimic real-world conditions such as latency, localization errors, and low V2X penetration rates. We convert these messages into a dedicated bird's-eye view (BEV) input and fuse them into a BEVFusion-style detector. Our results demonstrate that while object-level cooperative information can substantially improve detection performance, achieving an NDS of 0.80 under favorable conditions, models trained on idealized data become fragile and over-reliant on V2X. Conversely, our proposed noise-aware training strategy, coupled with explicit confidence encoding, enhances robustness, maintaining performance gains even under severe noise and reduced V2X penetration.</sup>
+
+</details>
+
+[![Paper Thumbnail](/publications/v2x-perception.png)](https://arxiv.org/abs/2605.00595)
 
 ___
 
